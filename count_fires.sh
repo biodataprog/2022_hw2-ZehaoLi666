@@ -15,7 +15,7 @@ echo "The number of fires is" $(cat data3.csv|wc -l)"."
 
 #Step4: Print out the number of fires that occur each year
 cut -d, -f2 data3.csv | sort |uniq -c > count.csv  
-echo "The number of fires that occur from 2017 to 2021 is"$(awk '{print $1}' count1.csv)"respectively."
+echo "The number of fires that occur from 2017 to 2021 is"$(awk '{print $1}' count.csv)"respectively."
 
 #Step5:Print out the name largest fire
 cut -d,  -f6,13 data3.csv >name.csv
